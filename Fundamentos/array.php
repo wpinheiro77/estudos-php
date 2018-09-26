@@ -1,3 +1,5 @@
+<!-- TESTE SIMPLES DE ARRAYS NO PHP -->
+
 <?php
   $user = array("William", "Pinheiro", 41, "masculino"
   );

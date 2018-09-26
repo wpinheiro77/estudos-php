@@ -1,3 +1,5 @@
+<!-- FORMULÁRIO SIMPLES DE ENVIO COM POTS EM PÁGINA EXTERNA -->
+
 <?php
   require_once "recebe.php";
 ?>

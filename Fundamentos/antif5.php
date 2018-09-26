@@ -1,3 +1,6 @@
+<!-- ANTI F5 - PARA QUE NÃO FIQUE ENVIANDO O CONTEÚDO DO FORMULÁRIO REPETIDAMENTE -->
+
+
 <?php
   if(isset($_POST["nome"])){
 

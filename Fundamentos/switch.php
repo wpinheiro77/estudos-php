@@ -1,3 +1,5 @@
+<!-- FUNCIONAMENTO BÁSICO DE UM SWITCH -->
+
 <?php
 
 $x = 3;

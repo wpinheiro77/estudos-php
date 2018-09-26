@@ -1,3 +1,5 @@
+<!-- PÁGINA QUEE RECEBE DADOS DE UM FORMULÁRIO EXTERNO -->
+
 <?php
 if(isset($_POST["email"]) && !empty($_POST["email"])){
 {
