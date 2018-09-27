@@ -1,0 +1,4 @@
+<!-- FUNÇÕES TEMPO -->
+<?php
+
+
