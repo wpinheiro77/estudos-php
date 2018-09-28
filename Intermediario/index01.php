@@ -1,36 +1,28 @@
-<?php require 'conecta.php'; ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>Controle de usuários</title>
-</head>
-<body>
+<?php require 'header.php'; ?>
   <br>
-  <a class="adiciona" href="adiciona.php">Inserir Novo Usuário</a>
+  <a class="btn btn-primary inserir fun" role="button" href="adiciona.php">Inserir Novo Usuário</a>
   <br><br>
-  <table class="user-tbl">
-    <tr>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Ações</th>
-    </tr>
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
     <?php
       $sql = "SELECT * FROM users";
       $sql = $pdo->query($sql);
       if($sql->rowCount() > 0){
         foreach($sql->fetchAll() as $usuario){
-
+          echo "<tbody>";
           echo'<tr>';
           echo'<td >'.$usuario['nome'].'</td>';
           echo'<td >'.$usuario['email'].'</td>';
-          echo'<td class="btn"><a href="editar.php?id='.$usuario['id'].'">Editar</a> - <a href="excluir.php?id='.$usuario['id'].'">Exluir</a></td>';
+          echo'<td><a class="btn btn-primary fun" href="editar.php?id='.$usuario['id'].'">Editar</a> - 
+                   <a class="btn btn-danger fun" href="excluir.php?id='.$usuario['id'].'">Exluir</a></td>';
+          echo "</tbody>";
           echo'</tr>';
-
         }
       }
     ?>
